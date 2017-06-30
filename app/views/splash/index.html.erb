@@ -1,0 +1,25 @@
+<div class='jumbotron'>
+  <h1>Welcome to Mario's!</h1>
+</div>
+<h3>About Marios</h3>
+<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit praesentium ab necessitatibus tempore officiis quibusdam, itaque reprehenderit saepe, cum amet dignissimos velit quaerat iusto corporis beatae, placeat aliquid, nostrum similique?</h5>
+<div class='row'>
+  <div class='col-md-6'>
+    <h3>New Items!</h3>
+    <% @products.recent_3.each do |product| %>
+      <div class='productListing'>
+        <h4><%= link_to product.name, product_path(product) %></h4>
+        <p>$<%= '%.2f' % product.cost %></p>
+        <p><strong>Origin Country:</strong> <%=product.country%></p>
+      </div>
+    <% end %>
+  </div>
+  <div class='col-md-6'>
+    <h3>Today's Most Popular</h3>
+    <div class='productListing'>
+      <h4><%= link_to @products.most_reviews[0].name, product_path(@products.most_reviews[0].id)%></h4>
+      <p>$<%= '%.2f' % @products.most_reviews[0].cost %></p>
+      <p><strong>Origin Country:</strong> <%=@products.most_reviews[0].country%></p>
+    </div>
+  </div>
+</div>

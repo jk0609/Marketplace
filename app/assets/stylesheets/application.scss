@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.review-body{
+  width: 50px;
+}
+.productListing{
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background: lightgrey;
+}
+.reviewListing{
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background: lightgrey;
+}
